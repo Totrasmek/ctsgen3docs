@@ -1,0 +1,4 @@
+/* Gradient header bar */
+.md-header {
+  background: linear-gradient(to right, rgb(254, 244, 0), rgb(255, 84, 14)); /* Example: blue to cyan */
+}

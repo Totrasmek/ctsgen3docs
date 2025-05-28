@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "ctsgen3"
+version = "0.1.0"
+description = "Interface for CTS Gen3 WE2. Comms, flashing, updating, visualising."
+authors = ["Ryan Krensel ryan@calumino.com"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+ft4222 = ">=1.12.0,<2.0.0"
+crc = ">=7.1.0,<8.0.0"
+matplotlib = ">=3.10.1,<4.0.0"
+numpy = ">=2.2.4,<3.0.0"
+pyqt6 = "^6.9.0"
+
+[tool.poetry.group.dev.dependencies]
+markdown-wavedrom = "^1.0.0"
+mkdocs = "^1.6.1"
+mkdocs-material = "^9.6.14"
+mkdocstrings-python = "^1.16.11"
+black = ">=25.1.0,<26.0.0"
+ruff = ">=0.11.2,<0.12.0"
+mypy = ">=1.15.0,<2.0.0"
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,41 @@
+site_name: CTS Gen3 tools
+repo_url: https://bitbucket.org/calumino/hx6538_cts_gen3/src/main/
+repo_name: Calumino internal Bitbucket repository
+
+theme:
+  name: material
+  logo: assets/logo.png
+
+extra_css:
+  - styles/custom.css
+
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            members_order: source
+            show_root_heading: true
+            show_bases: false
+            extra:
+              render_members: true
+
+markdown_extensions:
+  - admonition
+  - markdown_wavedrom
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/wavedrom/2.6.8/wavedrom.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/wavedrom/2.6.8/skins/default.js
+  - js/wavedrom_loader.js
+
+nav:
+  - Introduction: index.md
+  - SPI:
+    - Overview: spi/index.md
+    - API reference: spi/api.md
+  - Metadata registers:
+    - Overview: registers/index.md
+    - API reference: registers/api.md
