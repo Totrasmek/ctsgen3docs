@@ -1,0 +1,4424 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>API reference - CTS Gen3 tools</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../../styles/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ctsgen3.registers.registers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CTS Gen3 tools" class="md-header__button md-logo" aria-label="CTS Gen3 tools" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CTS Gen3 tools
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://bitbucket.org/calumino/hx6538_cts_gen3/src/main/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Calumino internal Bitbucket repository
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CTS Gen3 tools" class="md-nav__button md-logo" aria-label="CTS Gen3 tools" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    CTS Gen3 tools
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://bitbucket.org/calumino/hx6538_cts_gen3/src/main/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Calumino internal Bitbucket repository
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    SPI
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            SPI
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spi/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../spi/api/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API reference
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Metadata registers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Metadata registers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    API reference
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    API reference
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      registers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="registers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.TEMP_SENSOR_0x00" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEMP_SENSOR_0x00
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.LED_LIFETIME_0x01" class="md-nav__link">
+    <span class="md-ellipsis">
+      LED_LIFETIME_0x01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.GLOBAL_FRM_CNT_0x02" class="md-nav__link">
+    <span class="md-ellipsis">
+      GLOBAL_FRM_CNT_0x02
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.RESERVED_0x03_0x04" class="md-nav__link">
+    <span class="md-ellipsis">
+      RESERVED_0x03_0x04
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPOSURE_0x05" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPOSURE_0x05
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.LUMINOSITY_0x06" class="md-nav__link">
+    <span class="md-ellipsis">
+      LUMINOSITY_0x06
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.IS_TEMP_0x07" class="md-nav__link">
+    <span class="md-ellipsis">
+      IS_TEMP_0x07
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.LINEAR_COMP_INST_0x08" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINEAR_COMP_INST_0x08
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.LINEAR_COMP_AVG_0x09" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINEAR_COMP_AVG_0x09
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.SHIELDED_COMP_INST_0x0A" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHIELDED_COMP_INST_0x0A
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.SHIELDED_COMP_AVG_0x0B" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHIELDED_COMP_AVG_0x0B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.MAGNIFICATION_COMP_INST_0x0C" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAGNIFICATION_COMP_INST_0x0C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.MAGNIFICATION_COMP_AVG_0x0D" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAGNIFICATION_COMP_AVG_0x0D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.GRAV_COMP_0x0E" class="md-nav__link">
+    <span class="md-ellipsis">
+      GRAV_COMP_0x0E
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.WARMUP_COMP_0x0F" class="md-nav__link">
+    <span class="md-ellipsis">
+      WARMUP_COMP_0x0F
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.LONG_TERM_COMP_0x10" class="md-nav__link">
+    <span class="md-ellipsis">
+      LONG_TERM_COMP_0x10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.STRAY_LIGHT_COMP_0x11" class="md-nav__link">
+    <span class="md-ellipsis">
+      STRAY_LIGHT_COMP_0x11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.RESERVED_0x12_0x13" class="md-nav__link">
+    <span class="md-ellipsis">
+      RESERVED_0x12_0x13
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.SERIAL_NUMBER_LO_0x14" class="md-nav__link">
+    <span class="md-ellipsis">
+      SERIAL_NUMBER_LO_0x14
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.SERIAL_NUMBER_HI_0x15" class="md-nav__link">
+    <span class="md-ellipsis">
+      SERIAL_NUMBER_HI_0x15
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.FW_VERSION_0x16" class="md-nav__link">
+    <span class="md-ellipsis">
+      FW_VERSION_0x16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.FOV_LENS_0x17" class="md-nav__link">
+    <span class="md-ellipsis">
+      FOV_LENS_0x17
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.DECENTRATION_0x18" class="md-nav__link">
+    <span class="md-ellipsis">
+      DECENTRATION_0x18
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CALIB_PARAMS_0x19" class="md-nav__link">
+    <span class="md-ellipsis">
+      CALIB_PARAMS_0x19
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.RESERVED_0x1A_0x1E" class="md-nav__link">
+    <span class="md-ellipsis">
+      RESERVED_0x1A_0x1E
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CIS_frame_rate_enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      CIS_frame_rate_enum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CTS_CTRL_0x1F" class="md-nav__link">
+    <span class="md-ellipsis">
+      CTS_CTRL_0x1F
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.BB_WIDTH_0x20" class="md-nav__link">
+    <span class="md-ellipsis">
+      BB_WIDTH_0x20
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.BB_HEIGHT_0x21" class="md-nav__link">
+    <span class="md-ellipsis">
+      BB_HEIGHT_0x21
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.THRES_0x22" class="md-nav__link">
+    <span class="md-ellipsis">
+      THRES_0x22
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.TEMP_OFFSET_0x23" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEMP_OFFSET_0x23
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_LUMITGT_0x24" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_LUMITGT_0x24
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_LUMITHS_0x25" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_LUMITHS_0x25
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_EXPMAX_0x26" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_EXPMAX_0x26
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_EXPMIN_0x27" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_EXPMIN_0x27
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_CONFIG_0x28" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_CONFIG_0x28
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.SHIELDED_COMP_CONFIG_0x29" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHIELDED_COMP_CONFIG_0x29
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_LUMIBBTGT_0x2A" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_LUMIBBTGT_0x2A
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_LUMIBBTHS_0x2B" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_LUMIBBTHS_0x2B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.RESERVED_0x2C_0x3B" class="md-nav__link">
+    <span class="md-ellipsis">
+      RESERVED_0x2C_0x3B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.IR_RESOLUTION_0x3C" class="md-nav__link">
+    <span class="md-ellipsis">
+      IR_RESOLUTION_0x3C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CMOS_RESOLUTION_0x3D" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS_RESOLUTION_0x3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CMOS_FRAME_CRC_0x3E" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS_FRAME_CRC_0x3E
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CMOS_FRAME_CNT_ADDR_0x3F" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS_FRAME_CNT_ADDR_0x3F
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.RegisterMap" class="md-nav__link">
+    <span class="md-ellipsis">
+      RegisterMap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers" class="md-nav__link">
+    <span class="md-ellipsis">
+      registers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="registers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.TEMP_SENSOR_0x00" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEMP_SENSOR_0x00
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.LED_LIFETIME_0x01" class="md-nav__link">
+    <span class="md-ellipsis">
+      LED_LIFETIME_0x01
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.GLOBAL_FRM_CNT_0x02" class="md-nav__link">
+    <span class="md-ellipsis">
+      GLOBAL_FRM_CNT_0x02
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.RESERVED_0x03_0x04" class="md-nav__link">
+    <span class="md-ellipsis">
+      RESERVED_0x03_0x04
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPOSURE_0x05" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPOSURE_0x05
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.LUMINOSITY_0x06" class="md-nav__link">
+    <span class="md-ellipsis">
+      LUMINOSITY_0x06
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.IS_TEMP_0x07" class="md-nav__link">
+    <span class="md-ellipsis">
+      IS_TEMP_0x07
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.LINEAR_COMP_INST_0x08" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINEAR_COMP_INST_0x08
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.LINEAR_COMP_AVG_0x09" class="md-nav__link">
+    <span class="md-ellipsis">
+      LINEAR_COMP_AVG_0x09
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.SHIELDED_COMP_INST_0x0A" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHIELDED_COMP_INST_0x0A
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.SHIELDED_COMP_AVG_0x0B" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHIELDED_COMP_AVG_0x0B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.MAGNIFICATION_COMP_INST_0x0C" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAGNIFICATION_COMP_INST_0x0C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.MAGNIFICATION_COMP_AVG_0x0D" class="md-nav__link">
+    <span class="md-ellipsis">
+      MAGNIFICATION_COMP_AVG_0x0D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.GRAV_COMP_0x0E" class="md-nav__link">
+    <span class="md-ellipsis">
+      GRAV_COMP_0x0E
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.WARMUP_COMP_0x0F" class="md-nav__link">
+    <span class="md-ellipsis">
+      WARMUP_COMP_0x0F
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.LONG_TERM_COMP_0x10" class="md-nav__link">
+    <span class="md-ellipsis">
+      LONG_TERM_COMP_0x10
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.STRAY_LIGHT_COMP_0x11" class="md-nav__link">
+    <span class="md-ellipsis">
+      STRAY_LIGHT_COMP_0x11
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.RESERVED_0x12_0x13" class="md-nav__link">
+    <span class="md-ellipsis">
+      RESERVED_0x12_0x13
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.SERIAL_NUMBER_LO_0x14" class="md-nav__link">
+    <span class="md-ellipsis">
+      SERIAL_NUMBER_LO_0x14
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.SERIAL_NUMBER_HI_0x15" class="md-nav__link">
+    <span class="md-ellipsis">
+      SERIAL_NUMBER_HI_0x15
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.FW_VERSION_0x16" class="md-nav__link">
+    <span class="md-ellipsis">
+      FW_VERSION_0x16
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.FOV_LENS_0x17" class="md-nav__link">
+    <span class="md-ellipsis">
+      FOV_LENS_0x17
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.DECENTRATION_0x18" class="md-nav__link">
+    <span class="md-ellipsis">
+      DECENTRATION_0x18
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CALIB_PARAMS_0x19" class="md-nav__link">
+    <span class="md-ellipsis">
+      CALIB_PARAMS_0x19
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.RESERVED_0x1A_0x1E" class="md-nav__link">
+    <span class="md-ellipsis">
+      RESERVED_0x1A_0x1E
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CIS_frame_rate_enum" class="md-nav__link">
+    <span class="md-ellipsis">
+      CIS_frame_rate_enum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CTS_CTRL_0x1F" class="md-nav__link">
+    <span class="md-ellipsis">
+      CTS_CTRL_0x1F
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.BB_WIDTH_0x20" class="md-nav__link">
+    <span class="md-ellipsis">
+      BB_WIDTH_0x20
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.BB_HEIGHT_0x21" class="md-nav__link">
+    <span class="md-ellipsis">
+      BB_HEIGHT_0x21
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.THRES_0x22" class="md-nav__link">
+    <span class="md-ellipsis">
+      THRES_0x22
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.TEMP_OFFSET_0x23" class="md-nav__link">
+    <span class="md-ellipsis">
+      TEMP_OFFSET_0x23
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_LUMITGT_0x24" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_LUMITGT_0x24
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_LUMITHS_0x25" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_LUMITHS_0x25
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_EXPMAX_0x26" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_EXPMAX_0x26
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_EXPMIN_0x27" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_EXPMIN_0x27
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_CONFIG_0x28" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_CONFIG_0x28
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.SHIELDED_COMP_CONFIG_0x29" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHIELDED_COMP_CONFIG_0x29
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_LUMIBBTGT_0x2A" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_LUMIBBTGT_0x2A
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.EXPCTRL_LUMIBBTHS_0x2B" class="md-nav__link">
+    <span class="md-ellipsis">
+      EXPCTRL_LUMIBBTHS_0x2B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.RESERVED_0x2C_0x3B" class="md-nav__link">
+    <span class="md-ellipsis">
+      RESERVED_0x2C_0x3B
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.IR_RESOLUTION_0x3C" class="md-nav__link">
+    <span class="md-ellipsis">
+      IR_RESOLUTION_0x3C
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CMOS_RESOLUTION_0x3D" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS_RESOLUTION_0x3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CMOS_FRAME_CRC_0x3E" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS_FRAME_CRC_0x3E
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.CMOS_FRAME_CNT_ADDR_0x3F" class="md-nav__link">
+    <span class="md-ellipsis">
+      CMOS_FRAME_CNT_ADDR_0x3F
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ctsgen3.registers.registers.RegisterMap" class="md-nav__link">
+    <span class="md-ellipsis">
+      RegisterMap
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+  <h1>API reference</h1>
+
+<div class="doc doc-object doc-module">
+
+
+
+<h2 id="ctsgen3.registers.registers" class="doc doc-heading">
+            <code>ctsgen3.registers.registers</code>
+
+
+</h2>
+
+    <div class="doc doc-contents first">
+
+
+
+
+
+
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.TEMP_SENSOR_0x00" class="doc doc-heading">
+            <code>TEMP_SENSOR_0x00</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Temperature of CMOS Image Sensor (CIS) dynamically updated every frame.</p>
+<p>The temperature is an &lt;8,8&gt; fixed point number.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TEMP_SENSOR_0x00</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Temperature of CMOS Image Sensor (CIS) dynamically updated every frame.</span>
+
+<span class="sd">    The temperature is an &lt;8,8&gt; fixed point number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;temperature_sensor_0&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int16</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_unimplemented&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int16</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.LED_LIFETIME_0x01" class="doc doc-heading">
+            <code>LED_LIFETIME_0x01</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Accumulated service time of the CTS since initial configuration, in minutes.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">LED_LIFETIME_0x01</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Accumulated service time of the CTS since initial configuration, in minutes.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;minutes&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.GLOBAL_FRM_CNT_0x02" class="doc doc-heading">
+            <code>GLOBAL_FRM_CNT_0x02</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Number of thermal frames captured since reset.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">GLOBAL_FRM_CNT_0x02</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Number of thermal frames captured since reset.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;frame_count&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.RESERVED_0x03_0x04" class="doc doc-heading">
+            <code>RESERVED_0x03_0x04</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Reserved.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">RESERVED_0x03_0x04</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Reserved.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;_reserved0&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;_reserved1&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.EXPOSURE_0x05" class="doc doc-heading">
+            <code>EXPOSURE_0x05</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>CIS exposure.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">EXPOSURE_0x05</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    CIS exposure.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;exposure&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.LUMINOSITY_0x06" class="doc doc-heading">
+            <code>LUMINOSITY_0x06</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Accumulated luminosity dynamically updated every frame.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">73</span>
+<span class="normal">74</span>
+<span class="normal">75</span>
+<span class="normal">76</span>
+<span class="normal">77</span>
+<span class="normal">78</span>
+<span class="normal">79</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">LUMINOSITY_0x06</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Accumulated luminosity dynamically updated every frame.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;luminosity&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.IS_TEMP_0x07" class="doc doc-heading">
+            <code>IS_TEMP_0x07</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Averaged CIS measured temperature. !!! we doing this?</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">85</span>
+<span class="normal">86</span>
+<span class="normal">87</span>
+<span class="normal">88</span>
+<span class="normal">89</span>
+<span class="normal">90</span>
+<span class="normal">91</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">IS_TEMP_0x07</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Averaged CIS measured temperature. !!! we doing this?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;image_sensor_temp&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.LINEAR_COMP_INST_0x08" class="doc doc-heading">
+            <code>LINEAR_COMP_INST_0x08</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Linear compensation for current frame.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 97</span>
+<span class="normal"> 98</span>
+<span class="normal"> 99</span>
+<span class="normal">100</span>
+<span class="normal">101</span>
+<span class="normal">102</span>
+<span class="normal">103</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">LINEAR_COMP_INST_0x08</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Linear compensation for current frame.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;linear_comp_inst&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.LINEAR_COMP_AVG_0x09" class="doc doc-heading">
+            <code>LINEAR_COMP_AVG_0x09</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Moving average for linear compensation (16 frames).</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">109</span>
+<span class="normal">110</span>
+<span class="normal">111</span>
+<span class="normal">112</span>
+<span class="normal">113</span>
+<span class="normal">114</span>
+<span class="normal">115</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">LINEAR_COMP_AVG_0x09</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Moving average for linear compensation (16 frames).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;linear_comp_avg&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.SHIELDED_COMP_INST_0x0A" class="doc doc-heading">
+            <code>SHIELDED_COMP_INST_0x0A</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Shielded compensation for current frame.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">121</span>
+<span class="normal">122</span>
+<span class="normal">123</span>
+<span class="normal">124</span>
+<span class="normal">125</span>
+<span class="normal">126</span>
+<span class="normal">127</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">SHIELDED_COMP_INST_0x0A</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Shielded compensation for current frame.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;shielded_comp_inst&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.SHIELDED_COMP_AVG_0x0B" class="doc doc-heading">
+            <code>SHIELDED_COMP_AVG_0x0B</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Moving average for shielded pixel compensation (16 frames).</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">133</span>
+<span class="normal">134</span>
+<span class="normal">135</span>
+<span class="normal">136</span>
+<span class="normal">137</span>
+<span class="normal">138</span>
+<span class="normal">139</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">SHIELDED_COMP_AVG_0x0B</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Moving average for shielded pixel compensation (16 frames).</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;shielded_comp_avg&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.MAGNIFICATION_COMP_INST_0x0C" class="doc doc-heading">
+            <code>MAGNIFICATION_COMP_INST_0x0C</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Unimplemented.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">145</span>
+<span class="normal">146</span>
+<span class="normal">147</span>
+<span class="normal">148</span>
+<span class="normal">149</span>
+<span class="normal">150</span>
+<span class="normal">151</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MAGNIFICATION_COMP_INST_0x0C</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unimplemented.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;_unimplemented&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.MAGNIFICATION_COMP_AVG_0x0D" class="doc doc-heading">
+            <code>MAGNIFICATION_COMP_AVG_0x0D</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Unimplemented.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">157</span>
+<span class="normal">158</span>
+<span class="normal">159</span>
+<span class="normal">160</span>
+<span class="normal">161</span>
+<span class="normal">162</span>
+<span class="normal">163</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">MAGNIFICATION_COMP_AVG_0x0D</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unimplemented.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;_unimplemented&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.GRAV_COMP_0x0E" class="doc doc-heading">
+            <code>GRAV_COMP_0x0E</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Unimplemented.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">169</span>
+<span class="normal">170</span>
+<span class="normal">171</span>
+<span class="normal">172</span>
+<span class="normal">173</span>
+<span class="normal">174</span>
+<span class="normal">175</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">GRAV_COMP_0x0E</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unimplemented.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;_unimplemented&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.WARMUP_COMP_0x0F" class="doc doc-heading">
+            <code>WARMUP_COMP_0x0F</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Unimplemented.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">181</span>
+<span class="normal">182</span>
+<span class="normal">183</span>
+<span class="normal">184</span>
+<span class="normal">185</span>
+<span class="normal">186</span>
+<span class="normal">187</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">WARMUP_COMP_0x0F</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unimplemented.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;_unimplemented&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.LONG_TERM_COMP_0x10" class="doc doc-heading">
+            <code>LONG_TERM_COMP_0x10</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Unimplemented.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">193</span>
+<span class="normal">194</span>
+<span class="normal">195</span>
+<span class="normal">196</span>
+<span class="normal">197</span>
+<span class="normal">198</span>
+<span class="normal">199</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">LONG_TERM_COMP_0x10</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unimplemented.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;_unimplemented&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.STRAY_LIGHT_COMP_0x11" class="doc doc-heading">
+            <code>STRAY_LIGHT_COMP_0x11</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Unimplemented.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">205</span>
+<span class="normal">206</span>
+<span class="normal">207</span>
+<span class="normal">208</span>
+<span class="normal">209</span>
+<span class="normal">210</span>
+<span class="normal">211</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">STRAY_LIGHT_COMP_0x11</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unimplemented.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;_unimplemented&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.RESERVED_0x12_0x13" class="doc doc-heading">
+            <code>RESERVED_0x12_0x13</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Unimplemented.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">217</span>
+<span class="normal">218</span>
+<span class="normal">219</span>
+<span class="normal">220</span>
+<span class="normal">221</span>
+<span class="normal">222</span>
+<span class="normal">223</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">RESERVED_0x12_0x13</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>  <span class="c1"># 0x12 - 0x13</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unimplemented.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;_reserved0&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;_reserved1&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.SERIAL_NUMBER_LO_0x14" class="doc doc-heading">
+            <code>SERIAL_NUMBER_LO_0x14</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Lower word of device serial number.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">229</span>
+<span class="normal">230</span>
+<span class="normal">231</span>
+<span class="normal">232</span>
+<span class="normal">233</span>
+<span class="normal">234</span>
+<span class="normal">235</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">SERIAL_NUMBER_LO_0x14</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Lower word of device serial number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;serial_lo&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.SERIAL_NUMBER_HI_0x15" class="doc doc-heading">
+            <code>SERIAL_NUMBER_HI_0x15</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Upper word of device serial number.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">241</span>
+<span class="normal">242</span>
+<span class="normal">243</span>
+<span class="normal">244</span>
+<span class="normal">245</span>
+<span class="normal">246</span>
+<span class="normal">247</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">SERIAL_NUMBER_HI_0x15</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Upper word of device serial number.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;serial_hi&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.FW_VERSION_0x16" class="doc doc-heading">
+            <code>FW_VERSION_0x16</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Firmware semantic version.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">253</span>
+<span class="normal">254</span>
+<span class="normal">255</span>
+<span class="normal">256</span>
+<span class="normal">257</span>
+<span class="normal">258</span>
+<span class="normal">259</span>
+<span class="normal">260</span>
+<span class="normal">261</span>
+<span class="normal">262</span>
+<span class="normal">263</span>
+<span class="normal">264</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">FW_VERSION_0x16</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Firmware semantic version.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;ver_patch&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint8</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;ver_minor&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint8</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;ver_major&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint8</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint8</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.FOV_LENS_0x17" class="doc doc-heading">
+            <code>FOV_LENS_0x17</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>FOV lens identifier.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">270</span>
+<span class="normal">271</span>
+<span class="normal">272</span>
+<span class="normal">273</span>
+<span class="normal">274</span>
+<span class="normal">275</span>
+<span class="normal">276</span>
+<span class="normal">277</span>
+<span class="normal">278</span>
+<span class="normal">279</span>
+<span class="normal">280</span>
+<span class="normal">281</span>
+<span class="normal">282</span>
+<span class="normal">283</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">FOV_LENS_0x17</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    FOV lens identifier.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;lens_index&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit   0 -  5</span>
+        <span class="p">(</span><span class="s2">&quot;assembly_type_generation_index&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit   6 - 11</span>
+        <span class="p">(</span><span class="s2">&quot;lens_material_index&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>  <span class="c1"># bit  12 - 15</span>
+        <span class="p">(</span><span class="s2">&quot;config_type_index&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit  16 - 21</span>
+        <span class="p">(</span><span class="s2">&quot;metadata_version&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>  <span class="c1"># bit  22 - 26</span>
+        <span class="p">(</span><span class="s2">&quot;die_type_index&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span>
+    <span class="p">]</span>  <span class="c1"># bit  27 - 31</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.DECENTRATION_0x18" class="doc doc-heading">
+            <code>DECENTRATION_0x18</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Lens centration point as &lt;10,3&gt; fixed point numbers, and the row and column start indices for cropping.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">289</span>
+<span class="normal">290</span>
+<span class="normal">291</span>
+<span class="normal">292</span>
+<span class="normal">293</span>
+<span class="normal">294</span>
+<span class="normal">295</span>
+<span class="normal">296</span>
+<span class="normal">297</span>
+<span class="normal">298</span>
+<span class="normal">299</span>
+<span class="normal">300</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">DECENTRATION_0x18</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Lens centration point as &lt;10,3&gt; fixed point numbers, and the row and column start indices for cropping.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;centre_x&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>  <span class="c1"># bit   0 -  9</span>
+        <span class="p">(</span><span class="s2">&quot;centre_y&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>  <span class="c1"># bit  10 - 19</span>
+        <span class="p">(</span><span class="s2">&quot;column_start&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit  20 - 25</span>
+        <span class="p">(</span><span class="s2">&quot;row_start&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit  26 - 31</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.CALIB_PARAMS_0x19" class="doc doc-heading">
+            <code>CALIB_PARAMS_0x19</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>!!! Matt can you provide a description?</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">306</span>
+<span class="normal">307</span>
+<span class="normal">308</span>
+<span class="normal">309</span>
+<span class="normal">310</span>
+<span class="normal">311</span>
+<span class="normal">312</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">CALIB_PARAMS_0x19</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    !!! Matt can you provide a description?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;calib_params&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.RESERVED_0x1A_0x1E" class="doc doc-heading">
+            <code>RESERVED_0x1A_0x1E</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Unimplemented.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">318</span>
+<span class="normal">319</span>
+<span class="normal">320</span>
+<span class="normal">321</span>
+<span class="normal">322</span>
+<span class="normal">323</span>
+<span class="normal">324</span>
+<span class="normal">325</span>
+<span class="normal">326</span>
+<span class="normal">327</span>
+<span class="normal">328</span>
+<span class="normal">329</span>
+<span class="normal">330</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">RESERVED_0x1A_0x1E</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>  <span class="c1"># 0x1A - 0x1E</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unimplemented.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved0&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved1&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved0&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved0&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved0&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.CIS_frame_rate_enum" class="doc doc-heading">
+            <code>CIS_frame_rate_enum</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>CIS FPS settings which populate <code>FRAME_RATE_MODE</code> in <a class="autorefs autorefs-internal" href="#ctsgen3.registers.registers.CTS_CTRL_0x1F">CTS_CTRL_0x1F</a></p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">336</span>
+<span class="normal">337</span>
+<span class="normal">338</span>
+<span class="normal">339</span>
+<span class="normal">340</span>
+<span class="normal">341</span>
+<span class="normal">342</span>
+<span class="normal">343</span>
+<span class="normal">344</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">CIS_frame_rate_enum</span><span class="p">(</span><span class="n">IntEnum</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    CIS FPS settings which populate `FRAME_RATE_MODE` in [CTS_CTRL_0x1F][ctsgen3.registers.registers.CTS_CTRL_0x1F]</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">FPS_60</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1">#: 60 FPS (default)</span>
+    <span class="n">FPS_32</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1">#: 32 FPS</span>
+    <span class="n">FPS_8</span> <span class="o">=</span> <span class="mi">2</span>  <span class="c1">#: 8 FPS</span>
+    <span class="n">FPS_1</span> <span class="o">=</span> <span class="mi">3</span>  <span class="c1">#: 1 FPS</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.CTS_CTRL_0x1F" class="doc doc-heading">
+            <code>CTS_CTRL_0x1F</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Flags enabling image processing techniques, # frames used to average (2^NUM_FRAMES_TO_AVG), frame rate (FRAME_RATE_MODE as CIS_frame_rate)</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">347</span>
+<span class="normal">348</span>
+<span class="normal">349</span>
+<span class="normal">350</span>
+<span class="normal">351</span>
+<span class="normal">352</span>
+<span class="normal">353</span>
+<span class="normal">354</span>
+<span class="normal">355</span>
+<span class="normal">356</span>
+<span class="normal">357</span>
+<span class="normal">358</span>
+<span class="normal">359</span>
+<span class="normal">360</span>
+<span class="normal">361</span>
+<span class="normal">362</span>
+<span class="normal">363</span>
+<span class="normal">364</span>
+<span class="normal">365</span>
+<span class="normal">366</span>
+<span class="normal">367</span>
+<span class="normal">368</span>
+<span class="normal">369</span>
+<span class="normal">370</span>
+<span class="normal">371</span>
+<span class="normal">372</span>
+<span class="normal">373</span>
+<span class="normal">374</span>
+<span class="normal">375</span>
+<span class="normal">376</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">CTS_CTRL_0x1F</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Flags enabling image processing techniques, # frames used to average (2^NUM_FRAMES_TO_AVG), frame rate (FRAME_RATE_MODE as CIS_frame_rate)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="c1"># !!! Matt can you review?</span>
+        <span class="c1"># remove/rethink disable_img_proc, disable i2c_poll? put as unimplemented?</span>
+        <span class="c1"># make frames to avg and frame rate read only</span>
+        <span class="c1"># test patterns enabled? put as unimplemented?</span>
+        <span class="p">(</span><span class="s2">&quot;EXPOSURE_CTRL_ENABLE_BIT&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit   0</span>
+        <span class="p">(</span><span class="s2">&quot;BAD_PIXEL_ENABLE_BIT&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit   1</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved2&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit   2</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved3&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit   3</span>
+        <span class="p">(</span><span class="s2">&quot;LINEAR_COMP_ENABLE_BIT&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit   4</span>
+        <span class="p">(</span><span class="s2">&quot;DX_CENTROID_ENABLE_BIT&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit   5</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved6&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit   6</span>
+        <span class="p">(</span><span class="s2">&quot;SHIELDED_COMP_ENABLE_BIT&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit   7</span>
+        <span class="p">(</span><span class="s2">&quot;NUM_FRAMES_TO_AVG&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>  <span class="c1"># bits  8 - 10</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved11&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit  11</span>
+        <span class="p">(</span><span class="s2">&quot;FRAME_RATE_MODE&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span>  <span class="c1"># bits 12 - 15</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved16_23&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span>  <span class="c1"># bits 16 - 23</span>
+        <span class="p">(</span><span class="s2">&quot;ENABLE_CMOS_TEST_PATTERN&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit  24</span>
+        <span class="p">(</span><span class="s2">&quot;ENABLE_CENTROID_TEST_PATTERN&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit  25</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved26_28&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>  <span class="c1"># bits 26 - 28</span>
+        <span class="p">(</span><span class="s2">&quot;DISABLE_I2C_POLL&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit  29</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved30&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit  30</span>
+        <span class="p">(</span><span class="s2">&quot;DISABLE_IMG_PROC&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>  <span class="c1"># bit  31</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.BB_WIDTH_0x20" class="doc doc-heading">
+            <code>BB_WIDTH_0x20</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Default bounding box width values, 6bit unsigned.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">382</span>
+<span class="normal">383</span>
+<span class="normal">384</span>
+<span class="normal">385</span>
+<span class="normal">386</span>
+<span class="normal">387</span>
+<span class="normal">388</span>
+<span class="normal">389</span>
+<span class="normal">390</span>
+<span class="normal">391</span>
+<span class="normal">392</span>
+<span class="normal">393</span>
+<span class="normal">394</span>
+<span class="normal">395</span>
+<span class="normal">396</span>
+<span class="normal">397</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">BB_WIDTH_0x20</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Default bounding box width values, 6bit unsigned.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;width0&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit   0 -  5</span>
+        <span class="p">(</span><span class="s2">&quot;reserved6_7&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="c1"># bit   6 -  7</span>
+        <span class="p">(</span><span class="s2">&quot;width1&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit   8 - 13</span>
+        <span class="p">(</span><span class="s2">&quot;reserved14_15&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="c1"># bit  14 - 15</span>
+        <span class="p">(</span><span class="s2">&quot;width2&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit  16 - 21</span>
+        <span class="p">(</span><span class="s2">&quot;reserved&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="c1"># bit  22 - 23</span>
+        <span class="p">(</span><span class="s2">&quot;width3&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit  24 - 29</span>
+        <span class="p">(</span><span class="s2">&quot;reserved22_23&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="c1"># bit  29 - 31</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.BB_HEIGHT_0x21" class="doc doc-heading">
+            <code>BB_HEIGHT_0x21</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Default bounding box height values, 6bit unsigned.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">403</span>
+<span class="normal">404</span>
+<span class="normal">405</span>
+<span class="normal">406</span>
+<span class="normal">407</span>
+<span class="normal">408</span>
+<span class="normal">409</span>
+<span class="normal">410</span>
+<span class="normal">411</span>
+<span class="normal">412</span>
+<span class="normal">413</span>
+<span class="normal">414</span>
+<span class="normal">415</span>
+<span class="normal">416</span>
+<span class="normal">417</span>
+<span class="normal">418</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">BB_HEIGHT_0x21</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Default bounding box height values, 6bit unsigned.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;height0&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit   0 -  5</span>
+        <span class="p">(</span><span class="s2">&quot;reserved6_7&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="c1"># bit   6 -  7</span>
+        <span class="p">(</span><span class="s2">&quot;height1&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit   8 - 13</span>
+        <span class="p">(</span><span class="s2">&quot;reserved14_15&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="c1"># bit  14 - 15</span>
+        <span class="p">(</span><span class="s2">&quot;height2&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit  16 - 21</span>
+        <span class="p">(</span><span class="s2">&quot;reserved&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="c1"># bit  22 - 23</span>
+        <span class="p">(</span><span class="s2">&quot;height3&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span>  <span class="c1"># bit  24 - 29</span>
+        <span class="p">(</span><span class="s2">&quot;reserved22_23&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>  <span class="c1"># bit  29 - 31</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.THRES_0x22" class="doc doc-heading">
+            <code>THRES_0x22</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Default bounding box threshold values, 6bit unsigned.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">424</span>
+<span class="normal">425</span>
+<span class="normal">426</span>
+<span class="normal">427</span>
+<span class="normal">428</span>
+<span class="normal">429</span>
+<span class="normal">430</span>
+<span class="normal">431</span>
+<span class="normal">432</span>
+<span class="normal">433</span>
+<span class="normal">434</span>
+<span class="normal">435</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">THRES_0x22</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Default bounding box threshold values, 6bit unsigned.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;thres0&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint8</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;thres1&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint8</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;thres2&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint8</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;thres3&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint8</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.TEMP_OFFSET_0x23" class="doc doc-heading">
+            <code>TEMP_OFFSET_0x23</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Per pixel constant temperature offset <code>C</code> for image processing and CIS constant temperature offset <code>E</code> as &lt;8,8&gt; fixed point numbers.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">441</span>
+<span class="normal">442</span>
+<span class="normal">443</span>
+<span class="normal">444</span>
+<span class="normal">445</span>
+<span class="normal">446</span>
+<span class="normal">447</span>
+<span class="normal">448</span>
+<span class="normal">449</span>
+<span class="normal">450</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">TEMP_OFFSET_0x23</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Per pixel constant temperature offset `C` for image processing and CIS constant temperature offset `E` as &lt;8,8&gt; fixed point numbers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;conv_temp_offset&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int16</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;is_temp_offset&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int16</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.EXPCTRL_LUMITGT_0x24" class="doc doc-heading">
+            <code>EXPCTRL_LUMITGT_0x24</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Target accumulated luminosity.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">456</span>
+<span class="normal">457</span>
+<span class="normal">458</span>
+<span class="normal">459</span>
+<span class="normal">460</span>
+<span class="normal">461</span>
+<span class="normal">462</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">EXPCTRL_LUMITGT_0x24</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Target accumulated luminosity.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;luminosity_target&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.EXPCTRL_LUMITHS_0x25" class="doc doc-heading">
+            <code>EXPCTRL_LUMITHS_0x25</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Accumulated luminosity threshold</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">468</span>
+<span class="normal">469</span>
+<span class="normal">470</span>
+<span class="normal">471</span>
+<span class="normal">472</span>
+<span class="normal">473</span>
+<span class="normal">474</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">EXPCTRL_LUMITHS_0x25</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Accumulated luminosity threshold</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;luminosity_thresh&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.EXPCTRL_EXPMAX_0x26" class="doc doc-heading">
+            <code>EXPCTRL_EXPMAX_0x26</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Maximum corrected exposure value.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">480</span>
+<span class="normal">481</span>
+<span class="normal">482</span>
+<span class="normal">483</span>
+<span class="normal">484</span>
+<span class="normal">485</span>
+<span class="normal">486</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">EXPCTRL_EXPMAX_0x26</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Maximum corrected exposure value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;exposure_max&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.EXPCTRL_EXPMIN_0x27" class="doc doc-heading">
+            <code>EXPCTRL_EXPMIN_0x27</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Minimum corrected exposure value.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">492</span>
+<span class="normal">493</span>
+<span class="normal">494</span>
+<span class="normal">495</span>
+<span class="normal">496</span>
+<span class="normal">497</span>
+<span class="normal">498</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">EXPCTRL_EXPMIN_0x27</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Minimum corrected exposure value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;exposure_min&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.EXPCTRL_CONFIG_0x28" class="doc doc-heading">
+            <code>EXPCTRL_CONFIG_0x28</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Exposure correction step value.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">504</span>
+<span class="normal">505</span>
+<span class="normal">506</span>
+<span class="normal">507</span>
+<span class="normal">508</span>
+<span class="normal">509</span>
+<span class="normal">510</span>
+<span class="normal">511</span>
+<span class="normal">512</span>
+<span class="normal">513</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">EXPCTRL_CONFIG_0x28</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Exposure correction step value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;exposure_correction&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved10_31&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">,</span> <span class="mi">22</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.SHIELDED_COMP_CONFIG_0x29" class="doc doc-heading">
+            <code>SHIELDED_COMP_CONFIG_0x29</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Constant multiplier for shielded compensation value as a &lt;8,8&gt; signed integer.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">519</span>
+<span class="normal">520</span>
+<span class="normal">521</span>
+<span class="normal">522</span>
+<span class="normal">523</span>
+<span class="normal">524</span>
+<span class="normal">525</span>
+<span class="normal">526</span>
+<span class="normal">527</span>
+<span class="normal">528</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">SHIELDED_COMP_CONFIG_0x29</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Constant multiplier for shielded compensation value as a &lt;8,8&gt; signed integer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;shielded_multiplier&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_int16</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved16_31&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint16</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.EXPCTRL_LUMIBBTGT_0x2A" class="doc doc-heading">
+            <code>EXPCTRL_LUMIBBTGT_0x2A</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Target accumulated luminosity of bounding boxes only.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">534</span>
+<span class="normal">535</span>
+<span class="normal">536</span>
+<span class="normal">537</span>
+<span class="normal">538</span>
+<span class="normal">539</span>
+<span class="normal">540</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">EXPCTRL_LUMIBBTGT_0x2A</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Target accumulated luminosity of bounding boxes only.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;bb_luminosity_target&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.EXPCTRL_LUMIBBTHS_0x2B" class="doc doc-heading">
+            <code>EXPCTRL_LUMIBBTHS_0x2B</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Accumulated luminosity threshold of bounding boxes only.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">546</span>
+<span class="normal">547</span>
+<span class="normal">548</span>
+<span class="normal">549</span>
+<span class="normal">550</span>
+<span class="normal">551</span>
+<span class="normal">552</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">EXPCTRL_LUMIBBTHS_0x2B</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Accumulated luminosity threshold of bounding boxes only.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;bb_luminosity_thresh&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.RESERVED_0x2C_0x3B" class="doc doc-heading">
+            <code>RESERVED_0x2C_0x3B</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Unimplemented.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">558</span>
+<span class="normal">559</span>
+<span class="normal">560</span>
+<span class="normal">561</span>
+<span class="normal">562</span>
+<span class="normal">563</span>
+<span class="normal">564</span>
+<span class="normal">565</span>
+<span class="normal">566</span>
+<span class="normal">567</span>
+<span class="normal">568</span>
+<span class="normal">569</span>
+<span class="normal">570</span>
+<span class="normal">571</span>
+<span class="normal">572</span>
+<span class="normal">573</span>
+<span class="normal">574</span>
+<span class="normal">575</span>
+<span class="normal">576</span>
+<span class="normal">577</span>
+<span class="normal">578</span>
+<span class="normal">579</span>
+<span class="normal">580</span>
+<span class="normal">581</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">RESERVED_0x2C_0x3B</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>  <span class="c1"># 0x2C - 0x3B</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Unimplemented.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved0&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved1&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved2&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved3&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved4&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved5&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved6&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved7&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved8&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved9&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved10&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved11&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved12&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved13&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved14&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved15&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.IR_RESOLUTION_0x3C" class="doc doc-heading">
+            <code>IR_RESOLUTION_0x3C</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>Thermal image pixel dimensions.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">587</span>
+<span class="normal">588</span>
+<span class="normal">589</span>
+<span class="normal">590</span>
+<span class="normal">591</span>
+<span class="normal">592</span>
+<span class="normal">593</span>
+<span class="normal">594</span>
+<span class="normal">595</span>
+<span class="normal">596</span>
+<span class="normal">597</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">IR_RESOLUTION_0x3C</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Thermal image pixel dimensions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;ir_rows&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint8</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;ir_cols&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint8</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;_reserved16_31&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint16</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.CMOS_RESOLUTION_0x3D" class="doc doc-heading">
+            <code>CMOS_RESOLUTION_0x3D</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>CIS pixel dimensions.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">603</span>
+<span class="normal">604</span>
+<span class="normal">605</span>
+<span class="normal">606</span>
+<span class="normal">607</span>
+<span class="normal">608</span>
+<span class="normal">609</span>
+<span class="normal">610</span>
+<span class="normal">611</span>
+<span class="normal">612</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">CMOS_RESOLUTION_0x3D</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    CIS pixel dimensions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;cmos_rows&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint16</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;cmos_cols&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint16</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.CMOS_FRAME_CRC_0x3E" class="doc doc-heading">
+            <code>CMOS_FRAME_CRC_0x3E</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>!!! Matt we aren't doing this right?</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">618</span>
+<span class="normal">619</span>
+<span class="normal">620</span>
+<span class="normal">621</span>
+<span class="normal">622</span>
+<span class="normal">623</span>
+<span class="normal">624</span>
+<span class="normal">625</span>
+<span class="normal">626</span>
+<span class="normal">627</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">CMOS_FRAME_CRC_0x3E</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    !!! Matt we aren&#39;t doing this right?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;checksum&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint16</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;error_count&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint16</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.CMOS_FRAME_CNT_ADDR_0x3F" class="doc doc-heading">
+            <code>CMOS_FRAME_CNT_ADDR_0x3F</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>!!! Matt are we doing this?</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">633</span>
+<span class="normal">634</span>
+<span class="normal">635</span>
+<span class="normal">636</span>
+<span class="normal">637</span>
+<span class="normal">638</span>
+<span class="normal">639</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">CMOS_FRAME_CNT_ADDR_0x3F</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    !!! Matt are we doing this?</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[(</span><span class="s2">&quot;cmos_frame_count&quot;</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_uint32</span><span class="p">)]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-class">
+
+
+
+<h3 id="ctsgen3.registers.registers.RegisterMap" class="doc doc-heading">
+            <code>RegisterMap</code>
+
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+
+        <p>This struct is laid out exactly as it appears in memory, and maps each register address
+to its corresponding ctypes structure.</p>
+<p>Each field corresponds to one or more 32-bit metadata registers.</p>
+
+
+
+
+
+
+
+              <details class="quote">
+                <summary>Source code in <code>src/ctsgen3/registers/registers.py</code></summary>
+                <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">645</span>
+<span class="normal">646</span>
+<span class="normal">647</span>
+<span class="normal">648</span>
+<span class="normal">649</span>
+<span class="normal">650</span>
+<span class="normal">651</span>
+<span class="normal">652</span>
+<span class="normal">653</span>
+<span class="normal">654</span>
+<span class="normal">655</span>
+<span class="normal">656</span>
+<span class="normal">657</span>
+<span class="normal">658</span>
+<span class="normal">659</span>
+<span class="normal">660</span>
+<span class="normal">661</span>
+<span class="normal">662</span>
+<span class="normal">663</span>
+<span class="normal">664</span>
+<span class="normal">665</span>
+<span class="normal">666</span>
+<span class="normal">667</span>
+<span class="normal">668</span>
+<span class="normal">669</span>
+<span class="normal">670</span>
+<span class="normal">671</span>
+<span class="normal">672</span>
+<span class="normal">673</span>
+<span class="normal">674</span>
+<span class="normal">675</span>
+<span class="normal">676</span>
+<span class="normal">677</span>
+<span class="normal">678</span>
+<span class="normal">679</span>
+<span class="normal">680</span>
+<span class="normal">681</span>
+<span class="normal">682</span>
+<span class="normal">683</span>
+<span class="normal">684</span>
+<span class="normal">685</span>
+<span class="normal">686</span>
+<span class="normal">687</span>
+<span class="normal">688</span>
+<span class="normal">689</span>
+<span class="normal">690</span>
+<span class="normal">691</span>
+<span class="normal">692</span>
+<span class="normal">693</span>
+<span class="normal">694</span>
+<span class="normal">695</span>
+<span class="normal">696</span>
+<span class="normal">697</span>
+<span class="normal">698</span>
+<span class="normal">699</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">RegisterMap</span><span class="p">(</span><span class="n">ctypes</span><span class="o">.</span><span class="n">LittleEndianStructure</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+
+<span class="sd">    This struct is laid out exactly as it appears in memory, and maps each register address</span>
+<span class="sd">    to its corresponding ctypes structure.</span>
+
+<span class="sd">    Each field corresponds to one or more 32-bit metadata registers.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="n">_fields_</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;TEMP_SENSOR_0x00&quot;</span><span class="p">,</span> <span class="n">TEMP_SENSOR_0x00</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;LED_LIFETIME_0x01&quot;</span><span class="p">,</span> <span class="n">LED_LIFETIME_0x01</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;GLOBAL_FRM_CNT_0x02&quot;</span><span class="p">,</span> <span class="n">GLOBAL_FRM_CNT_0x02</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;RESERVED_0x03_0x04&quot;</span><span class="p">,</span> <span class="n">RESERVED_0x03_0x04</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;EXPOSURE_0x05&quot;</span><span class="p">,</span> <span class="n">EXPOSURE_0x05</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;LUMINOSITY_0x06&quot;</span><span class="p">,</span> <span class="n">LUMINOSITY_0x06</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;IS_TEMP_0x07&quot;</span><span class="p">,</span> <span class="n">IS_TEMP_0x07</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;LINEAR_COMP_INST_0x08&quot;</span><span class="p">,</span> <span class="n">LINEAR_COMP_INST_0x08</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;LINEAR_COMP_AVG_0x09&quot;</span><span class="p">,</span> <span class="n">LINEAR_COMP_AVG_0x09</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;SHIELDED_COMP_INST_0x0A&quot;</span><span class="p">,</span> <span class="n">SHIELDED_COMP_INST_0x0A</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;SHIELDED_COMP_AVG_0x0B&quot;</span><span class="p">,</span> <span class="n">SHIELDED_COMP_AVG_0x0B</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;MAGNIFICATION_COMP_INST_0x0C&quot;</span><span class="p">,</span> <span class="n">MAGNIFICATION_COMP_INST_0x0C</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;MAGNIFICATION_COMP_AVG_0x0D&quot;</span><span class="p">,</span> <span class="n">MAGNIFICATION_COMP_AVG_0x0D</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;GRAV_COMP_0x0E&quot;</span><span class="p">,</span> <span class="n">GRAV_COMP_0x0E</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;WARMUP_COMP_0x0F&quot;</span><span class="p">,</span> <span class="n">WARMUP_COMP_0x0F</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;LONG_TERM_COMP_0x10&quot;</span><span class="p">,</span> <span class="n">LONG_TERM_COMP_0x10</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;STRAY_LIGHT_COMP_0x11&quot;</span><span class="p">,</span> <span class="n">STRAY_LIGHT_COMP_0x11</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;RESERVED_0x12_0x13&quot;</span><span class="p">,</span> <span class="n">RESERVED_0x12_0x13</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;SERIAL_NUMBER_LO_0x14&quot;</span><span class="p">,</span> <span class="n">SERIAL_NUMBER_LO_0x14</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;SERIAL_NUMBER_HI_0x15&quot;</span><span class="p">,</span> <span class="n">SERIAL_NUMBER_HI_0x15</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;FW_VERSION_0x16&quot;</span><span class="p">,</span> <span class="n">FW_VERSION_0x16</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;FOV_LENS_0x17&quot;</span><span class="p">,</span> <span class="n">FOV_LENS_0x17</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;DECENTRATION_0x18&quot;</span><span class="p">,</span> <span class="n">DECENTRATION_0x18</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;CALIB_PARAMS_0x19&quot;</span><span class="p">,</span> <span class="n">CALIB_PARAMS_0x19</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;RESERVED_0x1A_0x1E&quot;</span><span class="p">,</span> <span class="n">RESERVED_0x1A_0x1E</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;CTS_CTRL_0x1F&quot;</span><span class="p">,</span> <span class="n">CTS_CTRL_0x1F</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;BB_WIDTH_0x20&quot;</span><span class="p">,</span> <span class="n">BB_WIDTH_0x20</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;BB_HEIGHT_0x21&quot;</span><span class="p">,</span> <span class="n">BB_HEIGHT_0x21</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;THRES_0x22&quot;</span><span class="p">,</span> <span class="n">THRES_0x22</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;TEMP_OFFSET_0x23&quot;</span><span class="p">,</span> <span class="n">TEMP_OFFSET_0x23</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;EXPCTRL_LUMITGT_0x24&quot;</span><span class="p">,</span> <span class="n">EXPCTRL_LUMITGT_0x24</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;EXPCTRL_LUMITHS_0x25&quot;</span><span class="p">,</span> <span class="n">EXPCTRL_LUMITHS_0x25</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;EXPCTRL_EXPMAX_0x26&quot;</span><span class="p">,</span> <span class="n">EXPCTRL_EXPMAX_0x26</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;EXPCTRL_EXPMIN_0x27&quot;</span><span class="p">,</span> <span class="n">EXPCTRL_EXPMIN_0x27</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;EXPCTRL_CONFIG_0x28&quot;</span><span class="p">,</span> <span class="n">EXPCTRL_CONFIG_0x28</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;SHIELDED_COMP_CONFIG_0x29&quot;</span><span class="p">,</span> <span class="n">SHIELDED_COMP_CONFIG_0x29</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;EXPCTRL_LUMIBBTGT_0x2A&quot;</span><span class="p">,</span> <span class="n">EXPCTRL_LUMIBBTGT_0x2A</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;EXPCTRL_LUMIBBTHS_0x2B&quot;</span><span class="p">,</span> <span class="n">EXPCTRL_LUMIBBTHS_0x2B</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;RESERVED_0x2C_0x3B&quot;</span><span class="p">,</span> <span class="n">RESERVED_0x2C_0x3B</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;IR_RESOLUTION_0x3C&quot;</span><span class="p">,</span> <span class="n">IR_RESOLUTION_0x3C</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;CMOS_RESOLUTION_0x3D&quot;</span><span class="p">,</span> <span class="n">CMOS_RESOLUTION_0x3D</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;CMOS_FRAME_CRC_0x3E&quot;</span><span class="p">,</span> <span class="n">CMOS_FRAME_CRC_0x3E</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;CMOS_FRAME_CNT_ADDR_0x3F&quot;</span><span class="p">,</span> <span class="n">CMOS_FRAME_CNT_ADDR_0x3F</span><span class="p">),</span>
+    <span class="p">]</span>
+    <span class="n">_pack_</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div></td></tr></table></div>
+              </details>
+
+
+
+  <div class="doc doc-children">
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+  </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wavedrom/2.6.8/wavedrom.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wavedrom/2.6.8/skins/default.js"></script>
+      
+        <script src="../../js/wavedrom_loader.js"></script>
+      
+    
+  </body>
+</html>
